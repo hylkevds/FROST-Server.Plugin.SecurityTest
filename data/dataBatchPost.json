@@ -1,0 +1,183 @@
+{
+    "POST to": "v1.1/$batch",
+    "Headers": "Content-Type: application/json",
+    "requests": [
+        {
+            "id": "roleObsCreater",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Roles",
+            "body": {
+                "rolename": "obscreate",
+                "description": "Can create Observations for the Projects the user is in."
+            }
+        },
+        {
+            "id": "project1",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Projects",
+            "body": {
+                "name": "Project 1",
+                "description": "The first test project"
+            }
+        },
+        {
+            "id": "project2",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Projects",
+            "body": {
+                "name": "Project 2",
+                "description": "The second test project"
+            }
+        },
+        {
+            "id": "AdminProject1",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Users",
+            "body": {
+                "username": "AdminProject1",
+                "userpass": "AdminProject1",
+                "UserProjectRoles": [
+                    {"Project":{"@iot.id": "$project1"}, "Role":{"rolename": "admin"}}
+                ]
+            }
+        },
+        {
+            "id": "ObsCreaterProject1",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Users",
+            "body": {
+                "username": "ObsCreaterProject1",
+                "userpass": "ObsCreaterProject1",
+                "UserProjectRoles": [
+                    {"Project":{"@iot.id": "$project1"}, "Role":{"rolename": "obscreate"}}
+                ]
+            }
+        },
+        {
+            "id": "AdminProject2",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Users",
+            "body": {
+                "username": "AdminProject2",
+                "userpass": "AdminProject2",
+                "UserProjectRoles": [
+                    {"Project":{"@iot.id": "$project2"}, "Role":{"rolename": "admin"}}
+                ]
+            }
+        },
+        {
+            "id": "ObsCreaterProject2",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Users",
+            "body": {
+                "username": "ObsCreaterProject2",
+                "userpass": "ObsCreaterProject2",
+                "UserProjectRoles": [
+                    {"Project":{"@iot.id": "$project2"}, "Role":{"rolename": "obscreate"}}
+                ]
+            }
+        },
+        {
+            "id": "location1",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Locations",
+            "body": {
+                "name": "Location 1",
+                "description": "The location of the first test thing",
+                "encodingType": "application/geo+json",
+                "location": {"type": "Point", "coordinates": [ 8, 49 ]}
+            }
+        },
+        {
+            "id": "location2",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Locations",
+            "body": {
+                "name": "Location 2",
+                "description": "The location of the second test thing",
+                "encodingType": "application/geo+json",
+                "location": {"type": "Point", "coordinates": [ 9, 50 ]}
+            }
+        },
+        {
+            "id": "location3",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Locations",
+            "body": {
+                "name": "Location 3",
+                "description": "The location of the third test thing",
+                "encodingType": "application/geo+json",
+                "location": {"type": "Point", "coordinates": [ 8, 50 ]}
+            }
+        },
+        {
+            "id": "location4",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Locations",
+            "body": {
+                "name": "Location 4",
+                "description": "The location of the fourth test thing",
+                "encodingType": "application/geo+json",
+                "location": {"type": "Point", "coordinates": [ 9, 49 ]}
+            }
+        },
+        {
+            "id": "thing1",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Things",
+            "body": {
+                "name": "Thing 1",
+                "description": "The first test thing",
+                "Locations": [{"@iot.id": "$location1"}],
+                "Projects": [{"@iot.id": "$project1"}]
+            }
+        },
+        {
+            "id": "thing2",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Things",
+            "body": {
+                "name": "Thing 2",
+                "description": "The second test thing",
+                "Locations": [{"@iot.id": "$location2"}],
+                "Projects": [{"@iot.id": "$project2"}]
+            }
+        },
+        {
+            "id": "thing3",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Things",
+            "body": {
+                "name": "Thing 3",
+                "description": "The third test thing",
+                "Locations": [{"@iot.id": "$location3"}],
+                "Projects": [{"@iot.id": "$project1"},{"@iot.id": "$project2"}]
+            }
+        },
+        {
+            "id": "thing4",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Things",
+            "body": {
+                "name": "Thing 4",
+                "description": "The fourth test thing",
+                "Locations": [{"@iot.id": "$location4"}]
+            }
+        }
+    ]
+}

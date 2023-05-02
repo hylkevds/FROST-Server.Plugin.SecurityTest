@@ -1,0 +1,41 @@
+{
+  "conformance": [],
+  "simplePropertyTypes": [],
+  "entityTypes": [
+    {
+      "name": "Role",
+      "plural": "Roles",
+      "adminOnly": false,
+      "table": "ROLES",
+      "entityProperties": [
+        {
+          "name": "roleName",
+          "aliases": [
+            "@iot.id"
+          ],
+          "type": "Id",
+          "handlers": [
+            {
+              "@class": "de.fraunhofer.iosb.ilt.frostserver.persistence.pgjooq.utils.fieldmapper.FieldMapperId",
+              "field": "ROLE_NAME"
+            }
+          ],
+          "annotations": []
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "handlers": [
+            {
+              "@class": "de.fraunhofer.iosb.ilt.frostserver.persistence.pgjooq.utils.fieldmapper.FieldMapperString",
+              "field": "DESCRIPTION"
+            }
+          ],
+          "annotations": []
+        }
+      ],
+      "navigationProperties": [],
+      "annotations": []
+    }
+  ]
+}
