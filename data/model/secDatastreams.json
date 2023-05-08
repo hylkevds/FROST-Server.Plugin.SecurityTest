@@ -5,9 +5,6 @@
       "wrappers": [
         {
           "@class": "de.fraunhofer.iosb.ilt.frostserver.persistence.pgjooq.utils.validator.ValidatorCUD",
-          "checkInsertPreRel": {
-            "className": ""
-          },
           "checkInsert": {
             "@class": "de.fraunhofer.iosb.ilt.frostserver.persistence.pgjooq.utils.validator.CheckMulti",
             "combineType": "OR",
