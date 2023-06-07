@@ -33,3 +33,8 @@ Users can have project-roles. Users are linked to a Project with a certain Role 
 **UserProjectRoles** Link a User with a specific Role to a Project. A User can have multiple Roles in the same Project.
 
 The `UserProjectRoles` entity type is only visible to admin users.
+
+## Data Model
+
+![Data Model](Datamodel-SensorThingsApi-SecurityTest.drawio.png)
+
