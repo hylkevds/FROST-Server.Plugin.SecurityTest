@@ -24,6 +24,7 @@ services:
       - auth_db_username=sensorthings
       - auth_db_password=ChangeMe
       - auth_autoUpdateDatabase=true
+      - auth_plainTextPassword=false
       - FROST_LL=debug
       - FROST_LL_service=debug
 
