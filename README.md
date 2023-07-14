@@ -10,7 +10,7 @@ A fine-grained security definition for FROST-Server.
 - admin
 
 The `Users` entity type is visible to all users, but normal users can only see their own User entry.
-Only admin users can see all users.
+Only global-admin users and project-admin users can see all users.
 Password are not visible to anyone, not even to admin users.
 
 Users can change their own password.
